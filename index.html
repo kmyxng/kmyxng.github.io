@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <!-- Bump ?v= whenever stylesheet.css changes, so browsers don't use a cached copy -->
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=2">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=4">
     <script>
       // Apply the saved theme before the page renders (default: light)
       (function () {
@@ -46,8 +46,8 @@
       <tr style="padding:0px">
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
+            <tr class="intro" style="padding:0px">
+              <td class="intro-text" style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
                   Kwangmo Yang
                 </p>
@@ -70,7 +70,7 @@
                   -->
                 </p>
               </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
+              <td class="intro-photo" style="padding:2.5%;width:37%;max-width:37%">
                 <a href="images/kmyxng.jpg"><img style="display:block;width:80%;max-width:80%;margin:0 auto;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/kmyxng.jpg" class="hoverZoomLink"></a>
               </td>
             </tr>
@@ -80,7 +80,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>News</h2>
+                <h2 class="section">📢 News</h2>
               </td>
             </tr>
           </tbody></table>
@@ -107,15 +107,15 @@
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
+              <td style="padding:16px 16px 4px;width:100%;vertical-align:middle">
+                <h2 class="section">🔬 Research</h2>
+                <p style="margin-bottom:0">
                   My current research focuses on <strong>On-Device Continual Learning</strong>. I am analyzing how catastrophic forgetting behaves in quantized models and developing memory- and latency-efficient methods to mitigate it. In the long term, I aim to enable robots to continually learn and adapt in the real world.
                 </p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="papers" style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
 <!--
@@ -176,7 +176,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Education</h2>
+                <h2 class="section">🎓 Education</h2>
               </td>
             </tr>
           </tbody></table>
@@ -212,7 +212,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Honors and Awards</h2>
+                <h2 class="section">🏆 Honors and Awards</h2>
               </td>
             </tr>
           </tbody></table>
@@ -238,7 +238,7 @@
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2>Miscellanea</h2>
+                <h2 class="section">📌 Miscellanea</h2>
               </td>
             </tr>
           </tbody></table>
@@ -275,8 +275,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
+                <p class="footer">
                   Website template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
                 </p>
               </td>

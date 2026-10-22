@@ -148,6 +148,7 @@ span.highlight {
   --link-hover: #f09228;
   --highlight: #ffffd0;
   --toggle-border: #dddddd;
+  --muted: #777777;
 }
 
 [data-theme="dark"] {
@@ -157,6 +158,7 @@ span.highlight {
   --link-hover: #f5a85c;
   --highlight: #34321f;
   --toggle-border: #444444;
+  --muted: #999999;
 }
 
 body {
@@ -220,4 +222,52 @@ span.highlight {
 .colored-box,
 .colored-box h2 {
   color: black;
+}
+
+/* Section headings: even, roomy spacing between sections */
+h2.section {
+  margin-top: 28px;
+}
+
+/* Hide the publications table while it has no papers */
+table.papers:not(:has(tr)) {
+  display: none;
+}
+
+.footer {
+  margin: 64px 0 0;
+  padding: 16px 0 24px;
+  border-top: 1px solid var(--toggle-border);
+  text-align: center;
+  font-size: small;
+  color: var(--muted);
+}
+
+.name {
+  white-space: nowrap;
+}
+
+/* Phones: stack the photo above the name and intro */
+@media (max-width: 600px) {
+  tr.intro {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  tr.intro > td.intro-text,
+  tr.intro > td.intro-photo {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  tr.intro > td.intro-photo img {
+    width: 65% !important;
+    max-width: 65% !important;
+  }
+
+  .name {
+    font-size: 28px;
+    padding-top: 8px;
+  }
 }
