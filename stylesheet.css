@@ -140,3 +140,84 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+/* Light / dark theme */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --link: #1772d0;
+  --link-hover: #f09228;
+  --highlight: #ffffd0;
+  --toggle-border: #dddddd;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #e6e6e6;
+  --link: #6cb4ff;
+  --link-hover: #f5a85c;
+  --highlight: #34321f;
+  --toggle-border: #444444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+body, td, th, tr, p, strong, h2, .name {
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+
+a:focus,
+a:hover {
+  color: var(--link-hover);
+}
+
+tr[bgcolor="#ffffd0"],
+span.highlight {
+  background-color: var(--highlight);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--toggle-border);
+  border-radius: 50%;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: border-color .2s ease-in-out, color .2s ease-in-out, transform .3s ease-in-out;
+}
+
+.theme-toggle:hover {
+  border-color: var(--link-hover);
+  color: var(--link-hover);
+  transform: rotate(-20deg);
+}
+
+.theme-toggle .icon-sun,
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+.colored-box,
+.colored-box h2 {
+  color: black;
+}
