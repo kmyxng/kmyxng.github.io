@@ -357,3 +357,37 @@ td.entry-date {
     font-size: 12.5px;
   }
 }
+
+/* Top wash: soft color glow at the top of the page that scrolls away */
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  /* -8px reaches past the body's default margin to the window edges */
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  height: 620px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 70% at 20% 0%, var(--wash-1), transparent 70%),
+    radial-gradient(55% 65% at 80% 0%, var(--wash-2), transparent 70%),
+    radial-gradient(50% 55% at 50% 0%, var(--wash-3), transparent 70%);
+}
+
+:root {
+  --wash-1: rgba(165, 180, 252, .55);
+  --wash-2: rgba(249, 168, 212, .45);
+  --wash-3: rgba(125, 211, 252, .40);
+}
+
+[data-theme="dark"] {
+  --wash-1: rgba(99, 102, 241, .28);
+  --wash-2: rgba(219, 39, 119, .20);
+  --wash-3: rgba(14, 165, 233, .18);
+}
