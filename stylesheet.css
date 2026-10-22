@@ -247,27 +247,54 @@ table.papers:not(:has(tr)) {
   white-space: nowrap;
 }
 
-/* Phones: stack the photo above the name and intro */
+/* Phones: keep the PC layout, but fit the name and tidy dated entries */
 @media (max-width: 600px) {
-  tr.intro {
+  .name {
+    font-size: 26px;
+    padding-top: 8px;
+  }
+
+  tr.intro > td.intro-photo img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  td.news-date {
+    white-space: nowrap;
+    width: 1% !important;
+    padding-right: 8px !important;
+  }
+
+  /* Education / Honors: show the date on its own line above each entry */
+  tr:has(> td.entry-date) {
     display: flex;
     flex-direction: column-reverse;
   }
 
-  tr.intro > td.intro-text,
-  tr.intro > td.intro-photo {
+  td.entry,
+  td.entry-date {
     display: block;
     width: auto !important;
-    max-width: none !important;
   }
 
-  tr.intro > td.intro-photo img {
-    width: 65% !important;
-    max-width: 65% !important;
+  td.entry-date {
+    text-align: left !important;
+    padding-bottom: 0 !important;
+    font-size: 13px;
+    color: var(--muted);
   }
 
-  .name {
-    font-size: 28px;
-    padding-top: 8px;
+  td.entry {
+    padding-top: 2px !important;
+    padding-bottom: 10px !important;
   }
+}
+
+/* Space between the name and the intro; less gap above the first section */
+.name {
+  margin-bottom: 20px;
+}
+
+h2.section.first {
+  margin-top: 0;
 }

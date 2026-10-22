@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <!-- Bump ?v= whenever stylesheet.css changes, so browsers don't use a cached copy -->
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=4">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=6">
     <script>
       // Apply the saved theme before the page renders (default: light)
       (function () {
@@ -71,7 +71,7 @@
                 </p>
               </td>
               <td class="intro-photo" style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/kmyxng.jpg"><img style="display:block;width:80%;max-width:80%;margin:0 auto;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/kmyxng.jpg" class="hoverZoomLink"></a>
+                <img style="display:block;width:80%;max-width:80%;margin:0 auto;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/kmyxng.jpg" class="hoverZoomLink">
               </td>
             </tr>
           </tbody></table>
@@ -80,27 +80,27 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2 class="section">📢 News</h2>
+                <h2 class="section first">📢 News</h2>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <!--
             <tr>
-              <td style="padding:4px 16px;width:15%;vertical-align:top"><strong>Mon 20XX</strong></td>
+              <td class="news-date" style="padding:4px 16px;width:15%;vertical-align:top"><strong>Mon 20XX</strong></td>
               <td style="padding:4px 16px;width:85%;vertical-align:top">One-line news, e.g. a paper accepted to <a href="https://cvpr.thecvf.com/">CVPR</a>.</td>
             </tr>
             -->
             <!-- EXAMPLE: replace or delete -->
 			  <!--
             <tr>
-              <td style="padding:4px 16px;width:15%;vertical-align:top"><strong>Mon 20XX</strong></td>
+              <td class="news-date" style="padding:4px 16px;width:15%;vertical-align:top"><strong>Mon 20XX</strong></td>
               <td style="padding:4px 16px;width:85%;vertical-align:top">Our paper "<a href="https://arxiv.org/abs/xxxx.xxxxx">Paper Title</a>" was accepted to <a href="https://neurips.cc/">NeurIPS 20XX</a>.</td>
             </tr>
 			  -->
 			  
             <tr>
-              <td style="padding:4px 16px;width:15%;vertical-align:top"><strong>Sep 2026</strong></td>
+              <td class="news-date" style="padding:4px 16px;width:15%;vertical-align:top"><strong>Sep 2026</strong></td>
               <td style="padding:4px 16px;width:85%;vertical-align:top">Started my M.S. at <a href="https://www.postech.ac.kr/eng/index.do">POSTECH</a> GSAI, joining the <a href="https://effl.postech.ac.kr/home/">Efficient Learning Lab</a>.</td>
             </tr>
           </tbody></table>
@@ -108,7 +108,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px 16px 4px;width:100%;vertical-align:middle">
-                <h2 class="section">🔬 Research</h2>
+                <h2 class="section">💡 Research</h2>
                 <p style="margin-bottom:0">
                   My current research focuses on <strong>On-Device Continual Learning</strong>. I am analyzing how catastrophic forgetting behaves in quantized models and developing memory- and latency-efficient methods to mitigate it. In the long term, I aim to enable robots to continually learn and adapt in the real world.
                 </p>
@@ -182,29 +182,29 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:4px 16px;width:75%;vertical-align:top">
+              <td class="entry" style="padding:4px 16px;width:75%;vertical-align:top">
                 <strong>M.S. in Artificial Intelligence</strong>, <a href="https://www.postech.ac.kr/eng/index.do">POSTECH</a>
                 <br>
                 Graduate School of Artificial Intelligence (GSAI), advised by <a href="https://jaeho-lee.github.io/">Prof. Jaeho Lee</a>
               </td>
-              <td style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Sep 2026 &ndash; Present</td>
+              <td class="entry-date" style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Sep 2026 &ndash; Present</td>
             </tr>
             <tr>
-              <td style="padding:4px 16px;width:75%;vertical-align:top">
+              <td class="entry" style="padding:4px 16px;width:75%;vertical-align:top">
                 <strong>B.S. in Computer Science and Engineering</strong>, <a href="https://www.postech.ac.kr/eng/index.do">POSTECH</a>
                 <br>
                 <em>Cum laude</em>
               </td>
-              <td style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Feb 2022 &ndash; Aug2026</td>
+              <td class="entry-date" style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Feb 2022 &ndash; Aug 2026</td>
             </tr>
             <!-- EXAMPLE: replace or delete -->
             <tr>
-              <td style="padding:4px 16px;width:75%;vertical-align:top">
+              <td class="entry" style="padding:4px 16px;width:75%;vertical-align:top">
                 <strong>Exchange Student</strong>, <a href="https://www.rwth-aachen.de/">RWTH Aachen University</a>
                 <br>
                 Department of Computer Science
               </td>
-              <td style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Oct 2025 &ndash; Feb 2026</td>
+              <td class="entry-date" style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Oct 2025 &ndash; Feb 2026</td>
             </tr>
           </tbody></table>
 
@@ -219,14 +219,14 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <!--
             <tr>
-              <td style="padding:4px 16px;width:75%;vertical-align:top"><strong>Award or Scholarship Name</strong>, Organization</td>
-              <td style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">20XX</td>
+              <td class="entry" style="padding:4px 16px;width:75%;vertical-align:top"><strong>Award or Scholarship Name</strong>, Organization</td>
+              <td class="entry-date" style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">20XX</td>
             </tr>
             -->
             <!-- EXAMPLE: replace or delete -->
 			<tr>
-              <td style="padding:4px 16px;width:75%;vertical-align:top"><strong>Undergraduate Research Program (UGRP) - <em>Excellence Award</em></strong>, POSTECH</td>
-              <td style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Feb 2024</td>
+              <td class="entry" style="padding:4px 16px;width:75%;vertical-align:top"><strong>Undergraduate Research Program (UGRP) - <em>Excellence Award</em></strong>, POSTECH</td>
+              <td class="entry-date" style="padding:4px 16px;width:25%;vertical-align:top;text-align:right">Feb 2024</td>
             </tr>
           </tbody></table>
 
