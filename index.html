@@ -285,5 +285,15 @@
         </td>
       </tr>
     </table>
+    <script>
+      // Track every link in Umami. Links that already have data-umami-event keep their own name;
+      // the rest are named after their text, with the destination in the "url" property.
+      document.querySelectorAll('a[href]').forEach(function (link) {
+        if (link.hasAttribute('data-umami-event')) return;
+        var name = link.textContent.replace(/\s+/g, ' ').trim() || link.getAttribute('href');
+        link.setAttribute('data-umami-event', name.slice(0, 50));
+        link.setAttribute('data-umami-event-url', link.getAttribute('href'));
+      });
+    </script>
   </body>
 </html>
